@@ -38,26 +38,12 @@ const routes: Routes = [
     {
       path: 'store',
       children: [
-      //  {
-        //  path: 'toystore',
-        //  component: ToysComponent
-      //  },
-        // {
-        //   path: 'sportstore',
-        //   component: SportComponent,
-        // },
+
          {
           path: 'foodstore',
           component: FoodComponent,
          },
-        // {
-        //   path: 'fashionstore',
-        //   component: FashionComponent,
-        // },
-        // {
-        //   path: 'elecstore',
-        //   component: ElectronicComponent,
-        // },
+      
       ],
 
     }

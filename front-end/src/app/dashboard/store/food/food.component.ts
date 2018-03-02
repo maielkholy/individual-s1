@@ -30,11 +30,11 @@ export class FoodComponent implements OnInit {
       createdAt: {
         title: 'Created At'
       },
-      sellerName: {
-        title: 'Seller Name'
+      seller: {
+        title: 'Seller'
       },
-      comp: {
-        title: 'Component Name'
+      component: {
+        title: 'Component'
       },
       _id: {
         title: 'id',
@@ -49,15 +49,16 @@ export class FoodComponent implements OnInit {
   }
   onCreateCall(event){
        event.confirm.resolve(event.newData);
-       this.foodService.createmai(event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
+       this.foodService.createmai(event.newData.name, event.newData.price,event.newData.seller,event.newData.component).subscribe();
   }
   onEditCall(event){
        event.confirm.resolve(event.newData);
-       this.foodService.updatemai(event.newData._id ,event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
+       this.foodService.updatemai(event.newData._id ,event.newData.name, event.newData.price,event.newData.seller,event.newData.component).subscribe();
   }
   onDeleteCall(event){
     event.confirm.resolve(event.data);
     this.foodService.deletemai(event.data._id).subscribe();
+    
   }
   ngOnInit() {
     this.foodService.getmais().subscribe(

@@ -18,7 +18,7 @@ var productSchema = mongoose.Schema({
     default: Date.now
   },
   updatedAt: Date,
-  sellerName: {
+  seller: {
     type: String,
     required: true,
     trim: true,
