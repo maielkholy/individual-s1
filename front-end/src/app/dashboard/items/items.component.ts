@@ -4,21 +4,21 @@ import { ItemsService } from './items.service'
 @Component({
   selector: 'app-dashboard-items',
   template: `
-            <p style="color:black"> Insert name of product: </p>
-            <input type="text" [(ngModel)]="productName"><br/>
+            <p style="color:black"> Insert name of mai: </p>
+            <input type="text" [(ngModel)]="maiName"><br/>
             <br/>
-            <p style="color:black" > Insert price of product: </p>
-            <input type="number" [(ngModel)]="productPrice"><br/>
+            <p style="color:black" > Insert price of mai: </p>
+            <input type="number" [(ngModel)]="maiPrice"><br/>
             <br/>
 
-            <button (click)="call()"> Add Product </button>
+            <button (click)="call()"> Add mai </button>
             `
 })
 
 
 export class ItemsComponent {
-  productName : string = '';
-  productPrice : number = 0;
+  maiName : string = '';
+  maiPrice : number = 0;
 
 
   constructor(private itemsService:ItemsService){
@@ -26,11 +26,11 @@ export class ItemsComponent {
   }
 
   call(){
-     this.itemsService.createProduct(this.productName, this.productPrice).subscribe();
+     this.itemsService.createmai(this.maiName, this.maiPrice).subscribe();
 }
 }
 
-   //   this.itemsService.getProducts().subscribe(){
+   //   this.itemsService.getmais().subscribe(){
    //   res => {
    //     console.log(res.data);
    //   }

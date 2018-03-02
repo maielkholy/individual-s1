@@ -7,12 +7,12 @@ export class ItemsService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createProduct(name:string, price:number) {
-    return this.httpClient.post(environment.apiUrl + 'product/createProduct', {'name':name, 'price':price});
+  createmai(name:string, price:number) {
+    return this.httpClient.post(environment.apiUrl + 'mai/createmai', {'name':name, 'price':price});
   }
 
-  // getProducts(){
-  //   return this.httpClient.get(environment.apiUrl + 'product/getProducts');
+  // getmais(){
+  //   return this.httpClient.get(environment.apiUrl + 'mai/getmais');
   // }
 
 }

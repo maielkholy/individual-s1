@@ -1,22 +1,22 @@
 var express = require('express'),
   router = express.Router(),
-  productCtrl = require('../controllers/ProductController');
+  maiCtrl = require('../controllers/maiController');
 
   const authentication = require('../controllers/authentication')(router);
   app = express();
 	memberCtrl = require('../controllers/MemberController');
 
 
-//-------------------------------Product Routes-----------------------------------
-router.get('/product/getProducts', productCtrl.getProducts);
-router.get('/product/getProduct/:productId', productCtrl.getProduct);
+//-------------------------------mai Routes-----------------------------------
+router.get('/mai/getmais', maiCtrl.getmais);
+router.get('/mai/getmai/:maiId', maiCtrl.getmai);
 router.get(
-  '/product/getProductsBelowPrice/:price',
-  productCtrl.getProductsBelowPrice
+  '/mai/getmaisBelowPrice/:price',
+  maiCtrl.getmaisBelowPrice
 );
-router.post('/product/createProduct', productCtrl.createProduct);
-router.patch('/product/updateProduct/:productId', productCtrl.updateProduct);
-router.delete('/product/deleteProduct/:productId', productCtrl.deleteProduct);
+router.post('/mai/createmai', maiCtrl.createmai);
+router.patch('/mai/updatemai/:maiId', maiCtrl.updatemai);
+router.delete('/mai/deletemai/:maiId', maiCtrl.deletemai);
 
 
 app.use('/authentication' , authentication);

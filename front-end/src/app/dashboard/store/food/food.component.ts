@@ -22,7 +22,7 @@ export class FoodComponent implements OnInit {
     columns: {
 
       name: {
-        title: 'Product Name'
+        title: 'mai Name'
       },
       price: {
         title: 'Price'
@@ -49,18 +49,18 @@ export class FoodComponent implements OnInit {
   }
   onCreateCall(event){
        event.confirm.resolve(event.newData);
-       this.foodService.createProduct(event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
+       this.foodService.createmai(event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
   }
   onEditCall(event){
        event.confirm.resolve(event.newData);
-       this.foodService.updateProduct(event.newData._id ,event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
+       this.foodService.updatemai(event.newData._id ,event.newData.name, event.newData.price,event.newData.sellerName,event.newData.comp).subscribe();
   }
   onDeleteCall(event){
-    event.confirm.resolve(event.newData);
-    this.foodService.deleteProduct(event.newData._id).subscribe();
+    event.confirm.resolve(event.data);
+    this.foodService.deletemai(event.data._id).subscribe();
   }
   ngOnInit() {
-    this.foodService.getProducts().subscribe(
+    this.foodService.getmais().subscribe(
       (res: any) => {
         console.log(res)
         if(res.hasOwnProperty('data'))

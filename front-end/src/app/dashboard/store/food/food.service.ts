@@ -7,19 +7,19 @@ export class FoodService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createProduct(name:string, price:number,sellerName:string , comp: string) {
-    return this.httpClient.post(environment.apiUrl + 'product/createProduct', {'name':name, 'price':price,'sellerName':sellerName,'comp':comp});
+  createmai(name:string, price:number,sellerName:string , comp: string) {
+    return this.httpClient.post(environment.apiUrl + 'mai/createmai', {'name':name, 'price':price,'sellerName':sellerName,'comp':comp});
   }
 
-  getProducts(){
-    return this.httpClient.get(environment.apiUrl + 'product/getProducts');
+  getmais(){
+    return this.httpClient.get(environment.apiUrl + 'mai/getmais');
   }
 
-  updateProduct(pid: object,name:string, price:number,sellerName:string, comp: string ) {
-    return this.httpClient.patch(environment.apiUrl + 'product/updateProduct/'+pid, {'name':name,'price':price,'sellerName':sellerName,'comp':comp});
+  updatemai(pid: object,name:string, price:number,sellerName:string, comp: string ) {
+    return this.httpClient.patch(environment.apiUrl + 'mai/updatemai/'+pid, {'name':name,'price':price,'sellerName':sellerName,'comp':comp});
   }
 
-deleteProduct(pid:object){
-  return this.httpClient.delete(environment.apiUrl +'product/deleteProduct/' +pid );
+deletemai(pid:object){
+  return this.httpClient.delete(environment.apiUrl +'mai/deletemai/' +pid );
 }
 }
