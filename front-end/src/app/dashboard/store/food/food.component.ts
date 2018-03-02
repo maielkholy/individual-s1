@@ -30,12 +30,16 @@ export class FoodComponent implements OnInit {
       createdAt: {
         title: 'Created At'
       },
-      seller: {
-        title: 'Seller'
+      updatedAt:{
+        title: 'Updated At'
       },
       component: {
         title: 'Component'
       },
+      seller: {
+        title: 'Seller'
+      },
+
       _id: {
         title: 'id',
         show: false
@@ -58,7 +62,7 @@ export class FoodComponent implements OnInit {
   onDeleteCall(event){
     event.confirm.resolve(event.data);
     this.foodService.deletemai(event.data._id).subscribe();
-    
+
   }
   ngOnInit() {
     this.foodService.getmais().subscribe(

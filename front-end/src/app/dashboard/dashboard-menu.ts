@@ -1,6 +1,5 @@
 import { NbMenuItem } from '@nebular/theme';
 import { StoreComponent } from './store/store.component';
-//import {FoodComponent} from './store/food/food.component'
 export const MENU_ITEMS: NbMenuItem[] = [
 
    { title: 'Dashboard', icon: 'nb-paper-plane', link: '/dashboard', home: true },

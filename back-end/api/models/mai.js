@@ -17,14 +17,14 @@ var maiSchema = mongoose.Schema({
     type: Date,
     default: Date.now
   },
-  updatedAt: Date,
+updatedAt:Date,
   seller: {
     type: String,
     required: true,
     trim: true,
     lowercase: true
   },
-  comp: {
+  component: {
     type: String,
     required: true,
     trim: true,
